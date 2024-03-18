@@ -5,6 +5,11 @@ import { format } from "date-fns";
 const app = express();
 const PORT = 4000;
 
+// Root route
+app.get("/", (req, res) => {
+  res.send("Welcome to the Timestamp API!");
+});
+
 // Api For Creating a Text File With Current time-stamp and write it to the file.
 
 app.post("/createfile", (req, res) => {
