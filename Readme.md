@@ -54,7 +54,7 @@ By default, the server runs on port 4000. You can change this in the `index.js` 
 
 - **Endpoint** : /createfile
  
-- **Method**: POST
+- **Method**: GET
   
 - **Description** : Creates a text file with the current timestamp in the TimeStamp folder.
   
