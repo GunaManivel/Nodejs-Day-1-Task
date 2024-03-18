@@ -12,13 +12,13 @@ app.get("/", (req, res) => {
 
 // Api For Creating a Text File With Current time-stamp and write it to the file.
 
-app.post("/createfile", (req, res) => {
+app.get("/createfile", (req, res) => {
   const timestamp = format(new Date(), "dd-MM-yyyy-HH-mm-ss");
   console.log("timestamp:", timestamp);
   const filename = `TimeStamp/${timestamp}.txt`;
   try {
     fs.writeFileSync(filename, `${timestamp}`, "utf-8");
-    res.status(200).send("File created successfully");
+    res.status(200).send(`File created successfully at ${timestamp}`);
   } catch (err) {
     console.error(err);
     res.status(500).send("Error creating file");
