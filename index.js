@@ -28,7 +28,7 @@ app.post("/createfile", (req, res) => {
 //Api for Retrieving all text files in that Folder
 
 app.get("/getAllFiles", (req, res) => {
-  fs.readdir("Timestamp", (err, files) => {
+  fs.readdir("TimeStamp", (err, files) => {
     if (err) {
       console.error(err);
       res.status(500).send("Error retrieving files");
